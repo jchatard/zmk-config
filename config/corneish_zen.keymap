@@ -67,7 +67,7 @@
    &trans &trans &trans &trans &trans &trans      &trans &kp PG_UP &kp UP   &kp PG_DN  &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &kp LEFT  &kp DOWN &kp RIGHT  &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &trans    &trans   &trans     &trans &trans
-                        &trans &trans &kp LSHIFT  &trans &trans    &trans
+                        &trans &trans &trans      &trans &trans    &trans
                         >;
                 };
 
