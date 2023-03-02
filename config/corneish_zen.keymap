@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define NUMS   1
+#define MOVE   2
+#define ADJUST 3
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
@@ -31,27 +36,27 @@
                         bindings = <
    &kp ESC   &kp Q &kp W     &kp E     &kp R    &kp T       &kp Y            &kp U    &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S     &kp D     &kp F    &kp G       &kp H            &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-   &mo 1     &kp Z &kp X     &kp C     &kp V    &kp B       &kp N            &kp M    &kp COMMA &kp DOT &kp FSLH &kp RET
-                             &kp LCTRL  &kp LALT  &kp LGUI  &mt LSHIFT SPACE &kp RALT  &mo 2
+   &mo NUMS  &kp Z &kp X     &kp C     &kp V    &kp B       &kp N            &kp M    &kp COMMA &kp DOT &kp FSLH &kp RET
+                             &kp LCTRL &kp LALT &kp LGUI    &mt LALT SPACE   &kp LSHIFT &mo MOVE
                         >;
                 };
                 lower_layer {
-                        label = "NUMBER";
+                        label = "@#123$";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |   €  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |   $  |  «  |  »  |  "  |  -  |  +  |   |  *  |  /  |  =  |  (  |  )  |      |
+// |      |     |     |     |     |     |   |     |  @  |  #  |  _  |  %  |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp LS(GRAVE) &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9)        &kp LS(N0) &trans
+   &kp GRAVE     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9            &kp N0     &trans
+   &trans        &trans     &trans     &trans     &trans     &trans         &kp MINUS  &kp EQUAL  &kp LS(MINUS)  &kp LS(EQUAL) &trans     &trans
+                           	           &trans     &trans     &trans         &trans     &trans     &trans
                         >;
                 };
 
                 raise_layer {
-                        label = "SYMBOL";
+                        label = "Move";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -64,5 +69,21 @@
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+
+                adjust_layer {
+                        label = "Adjust";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
+
         };
 };
