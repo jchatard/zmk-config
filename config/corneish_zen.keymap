@@ -12,7 +12,8 @@
 #define DEFAULT 0
 #define NUMS   1
 #define MOVE   2
-#define ADJUST 3
+#define PAD    3
+#define ADJUST 4
 
 / {
   chosen {
@@ -28,16 +29,16 @@
                 default_layer {
                         label = "Optimot";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R      |  T   |   |  Y       |  U    |  I  |  O  |  P  |  X   |
-// | TAB  |  A  |  S  |  D  |  F      |  G   |   |  H       |  J    |  K  |  L  |  ;  |  '   |
-// | NUMS |  Z  |  X  |  C  |  V      |  B   |   |  N       |  M    |  ,  |  .  |  /  | BKSP |
-//                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  ALT  | RSE |
+// | ESC  |  À  |  J  |  O  |  É      |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X   |
+// | TAB  |  A  |  I  |  E  |  U      |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^   |
+// | NUMS |  K  |  Y  |  È  |  .      |  W   |   |  G       |  C    |  M  |  H  |  V  | BKSP |
+//                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  ALT  | MOVE|
 
                         bindings = <
-   &kp ESC   &kp Q &kp W     &kp E     &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
-   &kp TAB   &kp A &kp S     &kp D     &kp F        &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mo NUMS  &kp Z &kp X     &kp C     &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSPC
-                             &kp LCTRL &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &kp LALT   &mo MOVE
+   &kp ESC   &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
+   &kp TAB   &kp A &kp S &kp D      &lt PAD F    &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
+   &mo NUMS  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSPC
+                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &kp LALT   &mo MOVE
                         >;
                 };
                 lower_layer {
@@ -58,15 +59,31 @@
                 raise_layer {
                         label = "Move";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |     |      |      |      |     |       |   |       | Pup     |  Up  | Pdow      |      |      |
+// |     |      |      |      |     |       |   |       | Left    |  Dwn | Right     |      |      |
+// |     |      |      |      |     |       |   |       |         |      |           |      |      |
+//                     |      |     |       |   |       |         |      |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &trans &trans &trans &trans &trans &trans      &trans &kp PG_UP &kp UP   &kp PG_DOWN &trans &trans
+   &trans &trans &trans &trans &trans &trans      &trans &kp LEFT  &kp DOWN &kp RIGHT   &trans &trans
+   &trans &trans &trans &trans &trans &trans      &trans &trans    &trans   &trans      &trans &trans
+                        &trans &trans &kp LSHIFT  &trans &trans    &trans
+                        >;
+                };
+
+
+                pad_layer {
+                        label = "Pad";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |      |       |      |   |  +  |  7  |  8  |  9  |  *  |  /   |
+// |      |     |     |      |       |      |   |  -  |  4  |  5  |  6  |  0  |  =   |
+// |      |     |     |      |       |      |   |  ,  |  1  |  2  |  3  |  .  |  RET |
+//                    |      |       |      |   |     |     |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans     &kp N5 &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp N6     &kp N7
+   &trans &trans &trans &trans &trans &trans     &kp N4 &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N0) &kp N8
+   &trans &trans &trans &trans &trans &trans     &kp F  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp C      &kp RET
+                        &trans &trans &trans     &trans &trans &trans
                         >;
                 };
 
