@@ -21,7 +21,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        label = "Optimot";
 // -----------------------------------------------------------------------------------------
 // |  @    |  Q  |  W  |  E  |  R  |  T      |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | TAB   |  A  |  S  |  D  |  F  |  G      |   |  H  |  J   |  K  |  L  |  ;  |  '   |
