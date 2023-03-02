@@ -30,7 +30,7 @@
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  W  |  E  |  R      |  T   |   |  Y       |  U    |  I  |  O  |  P  |  X   |
 // | TAB  |  A  |  S  |  D  |  F      |  G   |   |  H       |  J    |  K  |  L  |  ;  |  '   |
-// | LOWER|  Z  |  X  |  C  |  V      |  B   |   |  N       |  M    |  ,  |  .  |  /  | BKSP |
+// | NUMS |  Z  |  X  |  C  |  V      |  B   |   |  N       |  M    |  ,  |  .  |  /  | BKSP |
 //                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  ALT  | RSE |
 
                         bindings = <
