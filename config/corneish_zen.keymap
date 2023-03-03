@@ -30,16 +30,16 @@
                 default_layer {
                         label = "Optimot";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  À  |  J  |  O  |  É      |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X   |
-// | TAB  |  A  |  I  |  E  |  U      |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^   |
-// | NUMS |  K  |  Y  |  È  |  .      |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z   |
-//                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  CMD  | NUMS|
+// | TAB  |  À  |  J  |  O  |  É      |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X   |
+// | MEH  |  A  |  I  |  E  |  U      |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^   |
+// | CTRL |  K  |  Y  |  È  |  .      |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z   |
+//                    | ALT ENT| SHIFT | GUI  |   | SPC |  CMD  | NUMS|
 
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
-   &kp TAB   &kp A &kp S &kp D      &lt PAD F    &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mo NUMS  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &mo CMD    &mo NUMS
+   &kp TAB          &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
+   &kp LC(LS(LALT)) &kp A &kp S &kp D      &lt PAD F    &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL        &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                         &mt LALT RET &kp LSHIFT  &kp LGUI     &kp SPACE        &mo CMD    &mo NUMS
                         >;
                 };
                 lower_layer {
@@ -90,14 +90,14 @@
                 cmd_layer {
                         label = "CMD";
 // -----------------------------------------------------------------------------------------
-// |     |      |      |      |     | SUPPR |   | SUPPR |         |      |           |      |      |
+// | ESC |      |      |      |     | SUPPR |   | SUPPR |         |      |           |      |      |
 // |     |      |      |      |     | BACKS |   | BACKS |         |      |           |      |      |
-// |     |      |      |      |     | ENTER |   | ENTER |         |      |           |      |      |
-//                     |      |      |      |   |       |     |     |
+// |     |      |      |      |     |       |   |       |         |      |           |      |      |
+//                     |      |     |       |   |       |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &kp DEL     &kp DEL  &trans &trans &trans &trans &trans
+   &kp ESC &trans &trans &trans &trans &kp DEL     &kp DEL  &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &kp BSPC    &kp BSPC &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &kp RET     &kp RET  &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
                         &trans &trans &trans      &trans &trans &trans
                         >;
                 };
