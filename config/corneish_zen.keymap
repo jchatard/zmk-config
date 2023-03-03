@@ -95,9 +95,9 @@
 // |     |      |      |      |     | ENTER |   | ENTER |         |      |           |      |      |
 //                     |      |      |      |   |       |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &kp DEL     &kp DEL  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp N6     &kp N7
-   &trans &trans &trans &trans &trans &kp BSPC    &kp BSPC &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N0) &kp N8
-   &trans &trans &trans &trans &trans &kp ENT     &kp ENT  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp V      &kp RET
+   &trans &trans &trans &trans &trans &kp DEL     &kp DEL  &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &kp BSPC    &kp BSPC &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &kp RET     &kp RET  &trans &trans &trans &trans &trans
                         &trans &trans &trans      &trans &trans &trans
                         >;
                 };
