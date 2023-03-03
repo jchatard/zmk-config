@@ -39,7 +39,7 @@
    &kp ESC   &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
    &kp TAB   &kp A &kp S &kp D      &lt PAD F    &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
    &mo NUMS  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &kp LALT   &mo CMD
+                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &mo CMD    &mo NUMS
                         >;
                 };
                 lower_layer {
