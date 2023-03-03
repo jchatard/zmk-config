@@ -13,7 +13,8 @@
 #define NUMS   1
 #define MOVE   2
 #define PAD    3
-#define ADJUST 4
+#define CMD    4
+#define ADJUST 5
 
 / {
   chosen {
@@ -31,14 +32,14 @@
 // -----------------------------------------------------------------------------------------
 // | ESC  |  À  |  J  |  O  |  É      |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X   |
 // | TAB  |  A  |  I  |  E  |  U      |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^   |
-// | NUMS |  K  |  Y  |  È  |  .      |  W   |   |  G       |  C    |  M  |  H  |  V  | BKSP |
-//                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  ALT  | MOVE|
+// | NUMS |  K  |  Y  |  È  |  .      |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z   |
+//                    | CTRL| ALT ENT | GUI  |   | SHFT SPC |  CMD  | NUMS|
 
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
    &kp TAB   &kp A &kp S &kp D      &lt PAD F    &kp G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mo NUMS  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSPC
-                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &kp LALT   &mo MOVE
+   &mo NUMS  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                         &kp LCTRL  &mt LALT RET &kp LGUI      &mt LSHIFT SPACE &kp LALT   &mo NUMS
                         >;
                 };
                 lower_layer {
@@ -83,7 +84,21 @@
    &trans &trans &trans &trans &trans &trans     &kp N5 &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp N6     &kp N7
    &trans &trans &trans &trans &trans &trans     &kp N4 &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N0) &kp N8
    &trans &trans &trans &trans &trans &trans     &kp G  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp V      &kp RET
-                        &trans &trans &trans     &trans &trans &trans
+                        >;
+                };
+
+                cmd_layer {
+                        label = "CMD";
+// -----------------------------------------------------------------------------------------
+// |     |      |      |      |     | SUPPR |   | SUPPR |         |      |           |      |      |
+// |     |      |      |      |     | BACKS |   | BACKS |         |      |           |      |      |
+// |     |      |      |      |     | ENTER |   | ENTER |         |      |           |      |      |
+//                     |      |      |      |   |       |     |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans &kp DEL     &kp DEL  &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp N6     &kp N7
+   &trans &trans &trans &trans &trans &kp BSPC    &kp BSPC &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N0) &kp N8
+   &trans &trans &trans &trans &trans &kp ENT     &kp ENT  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp V      &kp RET
+                        &trans &trans &trans      &trans &trans &trans
                         >;
                 };
 
