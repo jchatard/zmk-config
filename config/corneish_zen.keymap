@@ -23,6 +23,12 @@
   };
 };
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <220>;              // repeat on tap-into-hold
+    hold-trigger-key-positions = <0>;  // tap on interrupt
+};
 
 / {
         keymap {
@@ -46,14 +52,14 @@
                 lower_layer {
                         label = "$€@#/()";
 // -----------------------------------------------------------------------------------------
-// |   €  |  @  |  #  |  _  |  %  |     |   |       |  <  |  >  |  [  |  ]  |      | 
+// |   €  |  @  |  #  |  _  |  %  |     |   |       |  <*  |  >*  |  [*  |  ]*  |      | 
 // |   $  |  «  |  »  |  "  |  -  |  +  |   |  *    |  /  |  =  |  (  |  )  |      |
 // |      |     |     |     |     |     |   |       |  \  |  Z  |  {  |  }  |      |
 //                    |     |     |     |   |       |     |     |
                         bindings = <
-   &kp LS(GRAVE) &kp MINUS &kp EQUAL  &kp LS(MINUS) &kp LS(EQUAL) &trans    &trans     &kp LS(COMMA) &kp LS(DOT) &kp LA(L)   &kp LA(SEMI) &trans
-   &kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4        &kp N5    &kp N6     &kp N7        &kp N8      &kp N9      &kp N0       &trans
-   &trans        &trans    &trans     &trans        &trans        &trans    &trans     &kp LA(N7)    &kp BSLH    &kp LA(U)   &kp LA(I)    &trans
+   &kp LS(GRAVE) &kp MINUS &kp EQUAL  &kp LS(MINUS) &kp LS(EQUAL) &trans    &trans     &kp LS(COMMA) &kp LS(DOT) &kp LA(N9)  &kp LA(N0) &trans
+   &kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4        &kp N5    &kp N6     &kp N7        &kp N8      &kp N9      &kp N0     &trans
+   &trans        &trans    &trans     &trans        &trans        &trans    &trans     &kp LA(N7)    &kp BSLH    &kp LA(U)   &kp LA(I)  &trans
                            	          &trans        &trans        &trans    &trans     &trans        &trans
                         >;
                 };
