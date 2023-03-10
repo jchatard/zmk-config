@@ -37,9 +37,9 @@
 //                        | NUMS| LALT | GUI  |   | SPC/SHIFT|  CMD  | NUMS|
 
                         bindings = <
-   &gresc            &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
+   &gresc         &kp Q &kp W &kp E      &kp R        &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
    &mt LSHIFT TAB &kp A &kp S &kp D      &kp F    &lt PAD G         &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mt RET LCTRL     &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &mt RSHIFT BSLH
+   &mt LCTRL RET  &kp Z &kp X &lt MOVE C &kp V        &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &mt RSHIFT BSLH
                          &mo NUMS &kp LALT  &kp LGUI     &mt RSHIFT SPACE        &mo NUMS    &mo CMD
                         >;
                 };
