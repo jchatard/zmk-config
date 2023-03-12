@@ -38,17 +38,17 @@
 
                 default_layer {
                         label = "Optimot";
-// -----------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------
 // | GRAVE_ESC|  À  |  J  |  O  |  É   |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X          |
 // | TAB SHIFT|  A  |  I  |  E  |  U   |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^          |
 // | ENT CTRL |  K  |  Y  |  È  |  .   |  W   |   |  G       |  C    |  M  |  H  |  V  |  RSHIFT Z   |
-//                        | LA| NUMS | GUI  |   | SPC/SHIFT|  CMD  | NUMS|
+//                        | LA  | NUMS | GUI  |   | SPC/SHIFT|  CMD  | NUMS|
 
                         bindings = <
-   &gresc         &kp OP_AGRV &kp W &kp E      &kp R     &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
-   &mt LSHIFT TAB &kp A       &kp S &kp D      &kp F     &lt PAD G     &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mt LCTRL RET  &kp Z       &kp X &lt MOVE C &kp V     &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &mt RSHIFT BSLH
-                              &kp LALT   &mo NUMS  &kp LGUI      &mt RSHIFT SPACE &mo CMD    &mo NUMS
+   &gresc         &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU  &kp OP_B         &kp OP_F         &kp OP_D &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
+   &mt LSHIFT TAB &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U     &lt PAD OP_COMM  &kp OP_P         &kp OP_T &kp OP_S &kp OP_R    &kp OP_N &kp OP_DCIR
+   &mt LCTRL RET  &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &kp OP_DOT   &kp OP_W         &kp OP_G         &kp OP_C &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
+                                       &kp LALT         &mo NUMS     &kp LGUI         &mt RSHIFT SPACE &mo CMD  &mo NUMS
                         >;
                 };
                 lower_layer {

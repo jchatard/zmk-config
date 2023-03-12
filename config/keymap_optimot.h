@@ -30,7 +30,7 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define OP_DLR  GRAVE  // $
+#define OP_DOLLAR  GRAVE  // $
 #define OP_LDAQ 1    // «
 #define OP_RDAQ 2    // »
 #define OP_DQUO 3    // "
