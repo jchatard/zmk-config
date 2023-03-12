@@ -54,15 +54,15 @@
                 lower_layer {
                         label = "$€@#/()";
 // -----------------------------------------------------------------------------------------
-// |   €  |  @  |  #  |  _  |  %  |     |   |       |  <*  |  >*  |  [*  |  ]*  |      | 
+// |   €  |  @  |  #  |  _  |  %  |     |   |       |  <  |  >  |  [  |  ]  |      | 
 // |   $  |  «  |  »  |  "  |  -  |  +  |   |  *    |  /  |  =  |  (  |  )  |      |
 // |      |     |     |     |     |     |   |       |  \  |  Z  |  {  |  }  |      |
 //                    |     |     |     |   |       |     |     |
                         bindings = <
-   &kp LS(GRAVE) &kp MINUS &kp EQUAL  &kp LS(MINUS) &kp LS(EQUAL) &trans    &trans     &kp LS(COMMA) &kp LS(DOT) &kp LA(N9)  &kp LA(N0) &trans
-   &kp GRAVE     &kp N1    &kp N2     &kp N3        &kp N4        &kp N5    &kp N6     &kp N7        &kp N8      &kp N9      &kp N0     &trans
-   &trans        &trans    &trans     &trans        &trans        &trans    &trans     &kp LA(N7)    &kp BSLH    &kp LA(U)   &kp LA(I)  &trans
-                           	          &trans        &trans        &trans    &trans     &trans        &trans
+   &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &trans          &trans      &kp OP_LABK &kp OP_RABK  &kp OP_LBRC  &kp OP_RBRC &trans
+   &kp OP_DOLLAR &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MINS  &kp OP_PLUS     &kp OP_ASTR &kp OP_SLSH &kp OP_EQL   &kp OP_LPRN  &kp OP_RPRN &trans
+   &trans        &trans         &trans       &trans       &trans       &trans          &trans      &kp OP_BSLS &kp OP_Z     &kp OP_LCBR  &kp OP_RCBR &trans
+                           	             &trans       &trans       &trans          &trans      &trans      &trans
                         >;
                 };
 
@@ -90,9 +90,9 @@
 // |      |     |     |      |       |      |   |  ,  |  1  |  2  |  3  |  .  |  RET |
 //                    |      |       |      |   |     |     |     |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans     &kp N5 &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp N6     &kp N7
-   &trans &trans &trans &trans &trans &trans     &kp N4 &kp LS(N4) &kp LS(N5) &kp LS(N6) &kp LS(N0) &kp N8
-   &trans &trans &trans &trans &trans &trans     &kp G  &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp V      &kp RET
+   &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7 &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
+   &trans &trans &trans &trans &trans &trans     &kp OP_MINS &kp OP_4 &kp OP_5 &kp OP_6 &kp OP_0    &kp OP_EQL
+   &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1 &kp OP_2 &kp OP_3 &kp OP_DOT  &kp RET
                         >;
                 };
 
@@ -107,7 +107,7 @@
    &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans &kp ESC &trans &trans &trans
    &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &kp BSPC &trans &kp RET &trans &trans &trans
    &trans      &trans   &trans &trans &trans &trans       &trans   &trans &trans  &trans &trans &trans
-                             &trans &trans &trans       &trans   &trans &trans
+                               &trans &trans &trans       &trans   &trans &trans
                         >;
                 };
 
@@ -115,14 +115,14 @@
                         label = "Adjust";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp TAB    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &kp F6   &kp F7   &kp F8  &kp F9    &kp F10 &trans
+   &trans     &kp F11      &kp F12      &kp F13      &kp F14      &kp F15        &kp F16  &kp F17  &kp F18 &kp F19   &kp F20 &trans
+   &kp LSHFT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans   &trans  &trans    &trans  &trans
+                                        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
