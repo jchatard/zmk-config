@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "keymap.h"
+
 #define DEFAULT 0
 #define NUMS   1
 #define MOVE   2
@@ -43,9 +45,9 @@
 //                        | LA| NUMS | GUI  |   | SPC/SHIFT|  CMD  | NUMS|
 
                         bindings = <
-   &gresc         &kp Q &kp W &kp E      &kp R     &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
-   &mt LSHIFT TAB &kp A &kp S &kp D      &kp F     &lt PAD G     &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
-   &mt LCTRL RET  &kp Z &kp X &lt MOVE C &kp V     &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &mt RSHIFT BSLH
+   &gresc         &kp OP_AGRV &kp W &kp E      &kp R     &kp T         &kp Y            &kp U      &kp I     &kp O   &kp P    &kp LBKT
+   &mt LSHIFT TAB &kp A       &kp S &kp D      &kp F     &lt PAD G     &kp H            &kp J      &kp K     &kp L   &kp SEMI &kp SQT
+   &mt LCTRL RET  &kp Z       &kp X &lt MOVE C &kp V     &kp B         &kp N            &kp M      &kp COMMA &kp DOT &kp FSLH &mt RSHIFT BSLH
                               &kp LALT   &mo NUMS  &kp LGUI      &mt RSHIFT SPACE &mo CMD    &mo NUMS
                         >;
                 };
