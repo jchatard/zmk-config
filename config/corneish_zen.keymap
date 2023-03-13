@@ -60,7 +60,7 @@
 //                    |     |     |     |   |       |     |     |
                         bindings = <
    &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &trans          &trans      &kp OP_LABK &kp OP_RABK  &kp OP_LBRC  &kp OP_RBRC &trans
-   &kp OP_DLR &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MINS  &kp OP_PLUS     &kp OP_ASTR &kp OP_SLSH &kp OP_EQL   &kp OP_LPRN  &kp OP_RPRN &trans
+   &kp OP_DLR    &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MINS  &kp OP_PLUS     &kp OP_ASTR &kp OP_SLSH &kp OP_EQL   &kp OP_LPRN  &kp OP_RPRN &trans
    &trans        &trans         &trans       &trans       &trans       &trans          &trans      &kp OP_BSLS &kp OP_Z     &kp OP_LCBR  &kp OP_RCBR &trans
                            	             &trans       &trans       &trans          &trans      &trans      &trans
                         >;
@@ -93,6 +93,7 @@
    &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7 &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
    &trans &trans &trans &trans &trans &trans     &kp OP_MINS &kp OP_4 &kp OP_5 &kp OP_6 &kp OP_0    &kp OP_EQL
    &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1 &kp OP_2 &kp OP_3 &kp OP_DOT  &kp RET
+                        &trans &trans &trans     &trans      &trans   &trans
                         >;
                 };
 
@@ -114,8 +115,8 @@
                 adjust_layer {
                         label = "Adjust";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  TAB |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 |  F10| BKSP |
+// |      |  F11|  F12|  F13|  F14|  F15|   |  F16|  F17|  F18|  F19|  F20| BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
