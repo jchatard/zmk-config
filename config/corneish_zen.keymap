@@ -86,14 +86,14 @@
                         label = "Pad";
 // -----------------------------------------------------------------------------------------
 // |      |     |     |      |       |      |   |  +  |  7  |  8  |  9  |  *  |  /   |
-// |      |     |     |      |       |      |   |  -  |  4  |  5  |  6  |  0  |  =   |
-// |      |     |     |      |       |      |   |  ,  |  1  |  2  |  3  |  .  |  RET |
-//                    |      |       |      |   |     |     |     |
+// |      |     |     |      |       |      |   |  -  |  4  |  5  |  6  |  .  |  =   |
+// |      |     |     |      |       |      |   |  ,  |  1  |  2  |  3  |  0  |  RET |
+//                    |      |       |      |   |  0  |  .  |  ,  |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7 &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
-   &trans &trans &trans &trans &trans &trans     &kp OP_MINS &kp OP_4 &kp OP_5 &kp OP_6 &kp OP_0    &kp OP_EQL
-   &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1 &kp OP_2 &kp OP_3 &kp OP_DOT  &kp RET
-                        &trans &trans &trans     &trans      &trans   &trans
+   &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7     &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
+   &trans &trans &trans &trans &trans &trans     &kp OP_MINS &kp OP_4     &kp OP_5 &kp OP_6 &kp OP_DOT  &kp OP_EQL
+   &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1     &kp OP_2 &kp OP_3 &kp OP_0    &kp RET
+                        &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
                         >;
                 };
 
