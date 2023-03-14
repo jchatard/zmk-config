@@ -246,3 +246,4 @@
 
 // Row 5
 #define OP_NNBS LS(LA(SPC))  //   (narrow non-breaking space)
+#define OP_PERC LS(OP_HASH) // %
