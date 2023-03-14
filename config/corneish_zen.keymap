@@ -18,6 +18,8 @@
 #define CMD    4
 #define ADJUST 5
 
+#define MEH LA(LS(LCTRL))
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
@@ -40,15 +42,15 @@
                         label = "Optimot";
 // ---------------------------------------------------------------------------------------------------
 // | GRAVE_ESC|  À  |  J  |  O  |  É   |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X |
-// | TAB SHIFT|  A  |  I  |  E  |  U 12|  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^ |
-// | ENT CTRL |  K  |  Y  |  È  |  .   |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z |
-//                        | ALT | SYMB | GUI  |   | SPC/CMD  | SHIFT |                                                                  |
+// | MEH TAB  |  A  |  I  |  E  |  U 12|  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^ |
+// | ENT CTRL |  K  |  Y  |  È->|  .⇧  |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z |
+//                        | ALT | SYMB | GUI  |   | SPC/CMD  | SHIFT | SYMB |
 
                         bindings = <
-   &gresc         &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU  &kp OP_B         &kp OP_F         &kp OP_D &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &mt LSHIFT TAB &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U &kp OP_COMM      &kp OP_P         &kp OP_T &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
-   &mt LCTRL RET  &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &kp OP_DOT   &kp OP_W         &kp OP_G         &kp OP_C &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
-                                       &kp LALT         &mo SYMB     &kp LGUI         &lt CMD SPACE    &kp RSHIFT  &mo SYMB
+   &gresc         &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
+   &mt MEH TAB    &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
+   &mt LCTRL RET  &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &mt LSHIFT OP_DOT &kp OP_W         &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
+                                       &kp LALT         &mo SYMB          &kp LGUI         &lt CMD SPACE    &kp RSHIFT  &mo SYMB
                         >;
                 };
                 lower_layer {
@@ -84,22 +86,22 @@
 
                 pad_layer {
                         label = "Pad";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |      |       |      |   |  +  |  7  |  8  |  9  |  *  |  /   |
-// |      |     |     |      |       |      |   |  -  |  4  |  5  |  6  |  .  |  =   |
-// |      |     |     |      |       |      |   |  ,  |  1  |  2  |  3  |  0  |  RET |
-//                    |      |       |      |   |  0  |  .  |  ,  |
+// -----------------------------------------------------------------------------------
+// |      |     |     |      |       |      |   |  DEL|  7  |  8  |  9  |  -  |  ×   |
+// |      |     |     |      |       |      |   | BSPC|  4  |  5  |  6  |  *  |  =   |
+// |      |     |     |      |       |      |   |  /  |  1  |  2  |  3  |  +  |  RET |
+//                    |      |       |      |   |  .  |  0  |  ,  |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7     &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
-   &trans &trans &trans &trans &trans &trans     &kp OP_MIN &kp OP_4      &kp OP_5 &kp OP_6 &kp OP_DOT  &kp OP_EQL
-   &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1     &kp OP_2 &kp OP_3 &kp OP_0    &kp RET
-                        &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
+   &trans &trans &trans &trans &trans &trans     &kp DEL     &kp OP_7     &kp OP_8    &kp OP_9 &kp OP_MIN  &kp OP_MUL
+   &trans &trans &trans &trans &trans &trans     &kp BSPC    &kp OP_4     &kp OP_5    &kp OP_6 &kp OP_ASTR &kp OP_EQL
+   &trans &trans &trans &trans &trans &trans     &kp OP_SLSH &kp OP_1     &kp OP_2    &kp OP_3 &kp OP_PLUS &kp RET
+                        &trans &trans &trans     &kp OP_DOT  &kp OP_0     &kp OP_COMM
                         >;
                 };
 
                 cmd_layer {
                         label = "CMD";
-// -----------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
 // | ESC      |CAPS  |      |      |      | DEL    |   | DEL    |      | ESC   |      |      |      |
 // |SHIFT     |      |      |      |      | BSPC   |   | BSPC   |  ⌘Z  | RET   |      |      |      |
 // |          |      |      |      |      |        |   |        |      |       |      |      |      |
