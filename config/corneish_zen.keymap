@@ -12,7 +12,7 @@
 #include "keymap_optimot.h"
 
 #define DEFAULT 0
-#define NUMS   1
+#define SYMB   1
 #define MOVE   2
 #define PAD    3
 #define CMD    4
@@ -39,44 +39,44 @@
                 default_layer {
                         label = "Optimot";
 // ---------------------------------------------------------------------------------------------------
-// | GRAVE_ESC|  À  |  J  |  O  |  É   |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X          |
-// | TAB SHIFT|  A  |  I  |  E  |  U   |  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^          |
-// | ENT CTRL |  K  |  Y  |  È  |  .   |  W   |   |  G       |  C    |  M  |  H  |  V  |  RSHIFT Z   |
-//                        | LA  | NUMS | GUI  |   | SPC/SHIFT|  CMD  | NUMS|
+// | GRAVE_ESC|  À  |  J  |  O  |  É   |  B   |   |  F       |  D    |  L  |  '  |  Qu |  X |
+// | TAB SHIFT|  A  |  I  |  E  |  U 12|  ,   |   |  P       |  T    |  S  |  R  |  N  |  ^ |
+// | ENT CTRL |  K  |  Y  |  È  |  .   |  W   |   |  G       |  C    |  M  |  H  |  V  |  Z |
+//                        | ALT | SYMB | GUI  |   | SPC/CMD  | SHIFT |                                                                  |
 
                         bindings = <
    &gresc         &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU  &kp OP_B         &kp OP_F         &kp OP_D &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &mt LSHIFT TAB &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U     &lt PAD OP_COMM  &kp OP_P         &kp OP_T &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
+   &mt LSHIFT TAB &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U &kp OP_COMM      &kp OP_P         &kp OP_T &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
    &mt LCTRL RET  &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &kp OP_DOT   &kp OP_W         &kp OP_G         &kp OP_C &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
-                                       &kp LALT         &mo NUMS     &kp LGUI         &mt RSHIFT SPACE &mo CMD  &mo NUMS
+                                       &kp LALT         &mo SYMB     &kp LGUI         &lt CMD SPACE    &kp RSHIFT  &mo SYMB
                         >;
                 };
                 lower_layer {
                         label = "$€@#/()";
 // -----------------------------------------------------------------------------------------
-// |   €  |  @  |  #  |  _  |  %  |     |   |       |  <  |  >  |  [  |  ]  |      | 
-// |   $  |  «  |  »  |  "  |  -  |  +  |   |  *    |  /  |  =  |  (  |  )  |      |
-// |      |     |     |     |     |     |   |       |  \  |  Z  |  {  |  }  |      |
-//                    |     |     |     |   |       |     |     |
+// |   €  |  @  |  #  |  _  |  %  |  =  |   | DEL  |  [  |  ]  |  '  |     |      | 
+// |   $  |  «  |  »  |  "  |  -  |  +  |   | BSPC |  (  |  )  |  `  |     |      |
+// |  ⌘Z  | ⌘R  | "|" |  /  |  \  |  *  |   |   /  |  {  |  }  |  "  |     |      |
+//                    |     |     |     |   |   .  |  <  |  >  |
                         bindings = <
-   &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &trans          &trans      &kp OP_LABK &kp OP_RABK  &kp OP_LBRC  &kp OP_RBRC &trans
-   &kp OP_DLR    &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS     &kp OP_ASTR &kp OP_SLSH &kp OP_EQL   &kp OP_LPRN  &kp OP_RPRN &trans
-   &trans        &trans         &trans       &trans       &trans       &trans          &trans      &kp OP_BSLS &kp OP_Z     &kp OP_LCBR  &kp OP_RCBR &trans
-                           	             &trans       &trans       &trans          &trans      &trans      &trans
+   &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &kp OP_EQL      &kp DEL     &kp OP_LBRC &kp OP_RBRC  &kp OP_QUOT &trans &trans
+   &kp OP_DLR    &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS     &kp BSPC    &kp OP_LPRN &kp OP_RPRN  &kp OP_LSQU &trans &trans
+   &kp LG(OP_Z)  &kp LG(OP_R)   &kp OP_PIPE  &kp OP_SLSH  &kp OP_BSLS  &kp OP_ASTR     &kp OP_SLSH &kp OP_LCBR &kp OP_RCBR  &kp OP_DQUO &trans &trans
+                           	             &trans       &trans       &trans          &kp OP_DOT  &kp OP_LABK &kp OP_RABK
                         >;
                 };
 
                 raise_layer {
                         label = "Move";
-// -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// |     |      |      |      |     |       |   |       | Home    |      | End       |      |      |
 // |     |      |      |      |     |       |   |       | Pup     |  Up  | Pdow      |      |      |
 // |     |      |      |      |     |       |   |       | Left    |  Dwn | Right     |      |      |
-// |     |      |      |      |     |       |   |       |         |      |           |      |      |
 //                     |      |     |       |   |       |         |      |
                         bindings = <
+   &trans &trans &trans &trans &trans &trans      &trans &kp HOME  &trans   &kp END    &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &kp PG_UP &kp UP   &kp PG_DN  &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &kp LEFT  &kp DOWN &kp RIGHT  &trans &trans
-   &trans &trans &trans &trans &trans &trans      &trans &trans    &trans   &trans     &trans &trans
                         &trans &trans &trans      &trans &trans    &trans
                         >;
                 };
@@ -91,7 +91,7 @@
 //                    |      |       |      |   |  0  |  .  |  ,  |
                         bindings = <
    &trans &trans &trans &trans &trans &trans     &kp OP_PLUS &kp OP_7     &kp OP_8 &kp OP_9 &kp OP_ASTR &kp OP_SLSH
-   &trans &trans &trans &trans &trans &trans     &kp OP_MIN &kp OP_4     &kp OP_5 &kp OP_6 &kp OP_DOT  &kp OP_EQL
+   &trans &trans &trans &trans &trans &trans     &kp OP_MIN &kp OP_4      &kp OP_5 &kp OP_6 &kp OP_DOT  &kp OP_EQL
    &trans &trans &trans &trans &trans &trans     &kp OP_COMM &kp OP_1     &kp OP_2 &kp OP_3 &kp OP_0    &kp RET
                         &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
                         >;
@@ -100,15 +100,15 @@
                 cmd_layer {
                         label = "CMD";
 // -----------------------------------------------------------------------------------------
-// | ESC      |CAPS  |      |      |      | SUPPR  |   | SUPPR  |      | ESC   |      |      |      |
-// |SHIFT     |      |      |      |      | BACKS  |   | BACKS  |      | RET   |      |      |      |
+// | ESC      |CAPS  |      |      |      | DEL    |   | DEL    |      | ESC   |      |      |      |
+// |SHIFT     |      |      |      |      | BSPC   |   | BSPC   |  ⌘Z  | RET   |      |      |      |
 // |          |      |      |      |      |        |   |        |      |       |      |      |      |
 //                          |      |      |        |   |        |      |       |
                           bindings = <
-   &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans &kp ESC &trans &trans &trans
-   &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &kp BSPC &trans &kp RET &trans &trans &trans
-   &trans      &trans   &trans &trans &trans &trans       &trans   &trans &trans  &trans &trans &trans
-                               &trans &trans &trans       &trans   &trans &trans
+   &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans       &kp ESC &trans &trans &trans
+   &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &kp BSPC &kp LG(OP_Z) &kp RET &trans &trans &trans
+   &trans      &trans   &trans &trans &trans &trans       &trans   &trans       &trans  &trans &trans &trans
+                               &trans &trans &trans       &trans   &trans       &trans
                         >;
                 };
 

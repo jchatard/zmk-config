@@ -139,7 +139,7 @@
 #define OP_LBRC LA(OP_LPRN) // [
 #define OP_RBRC LA(OP_RPRN) // ]
 #define OP_PLMN LA(OP_PLUS) // ±
-#define OP_MMNS LA(OP_MIN) // −
+#define OP_MMNS LA(OP_MIN)  // −
 #define OP_NEQL LA(OP_EQL)  // ≠
 #define OP_BSLS LA(OP_SLSH) // \ (backslash)
 #define OP_MUL  LA(OP_ASTR) // ×
