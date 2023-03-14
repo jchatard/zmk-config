@@ -31,16 +31,16 @@
  */
 // Row 1
 #define OP_DLR  GRAVE  // $
-#define OP_LDAQ 1    // «
-#define OP_RDAQ 2    // »
-#define OP_DQUO 3    // "
-#define OP_LPRN 4    // (
-#define OP_RPRN 5    // )
-#define OP_PERC 6    // %
-#define OP_PLUS 7    // +
-#define OP_MINS 8    // -
-#define OP_EQL  9    // =
-#define OP_SLSH 0    // /
+#define OP_LDAQ N1    // «
+#define OP_RDAQ N2    // »
+#define OP_DQUO N3    // "
+#define OP_LPRN N4    // (
+#define OP_RPRN N5    // )
+#define OP_PERC N6    // %
+#define OP_PLUS N7    // +
+#define OP_MINS N8    // -
+#define OP_EQL  N9    // =
+#define OP_SLSH N0    // /
 #define OP_ASTR KP_MINUS // *
 #define OP_HASH KP_EQUAL  // #
 // Row 2
