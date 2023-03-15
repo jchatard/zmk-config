@@ -71,14 +71,14 @@
                 raise_layer {
                         label = "Move";
 // -------------------------------------------------------------------------------------------------
-// |     |      |      |      |     |       |   |       | Home    |      | End       |      |      |
 // |     |      |      |      |     |       |   |       | Pup     |  Up  | Pdow      |      |      |
 // |     |      |      |      |     |       |   |       | Left    |  Dwn | Right     |      |      |
+// |     |      |      |      |     |       |   |       | Home    |      | End       |      |      |
 //                     |      |     |       |   |       |         |      |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans      &trans &kp HOME  &trans   &kp END    &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &kp PG_UP &kp UP   &kp PG_DN  &trans &trans
    &trans &trans &trans &trans &trans &trans      &trans &kp LEFT  &kp DOWN &kp RIGHT  &trans &trans
+   &trans &trans &trans &trans &trans &trans      &trans &kp HOME  &trans   &kp END    &trans &trans
                         &trans &trans &trans      &trans &trans    &trans
                         >;
                 };
