@@ -48,7 +48,7 @@
 
                         bindings = <
    &kp TAB        &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &kb MEH        &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
+   &kp MEH        &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
    &mt LCTRL RET  &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &mt LSHIFT OP_DOT &kp OP_W         &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
                                        &kp LALT         &mo SYMB          &kp LGUI         &lt CMD SPACE    &kp RSHIFT  &mo SYMB
                         >;
