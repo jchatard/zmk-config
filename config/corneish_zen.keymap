@@ -36,17 +36,6 @@
 
 / {
         behaviors {
-                lh_pht: left_hand_positional_hold_tap {
-                    compatible = "zmk,behavior-hold-tap";
-                    label = "LEFT_POSITIONAL_HOLD_TAP";
-                    #binding-cells = <2>;
-                    flavor = "tap-unless-interrupted";
-                    tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
-                    quick-tap-ms = <200>;
-                    bindings = <&kp>, <&kp>;
-                    hold-trigger-key-positions = <19 20 21 22>;    // <---[[right-hand keys]]
-                };
-
                 hm: homerow_mods {
                     compatible = "zmk,behavior-hold-tap";
                     label = "HOMEROW_MODS";
@@ -72,15 +61,15 @@
 
 // ---------------------------------------------------------------------------------------------------
 // | TAB      |  À  |  J  |  O    |  É   |  B   |   |  F   |  D    |  L  |  '  |  Qu |  X |
-// | MEH      |  A  |  I  |  E    |  U 12|  ,   |   |  P   |  T    |  S  |  R  |  N  |  ^ |
-// | LSHIFT   |  K  |  Y  |  È->  | .SYM |  W   |   |  G   |  C    |  M  |  H  |  V  |  Z |
-//                        | LCTRL |  ALT | GUI  |   | SPC  | CMD   | SYMB|
+// | MEH      |  A  | ̂I  |  ⌥E   |  ⇧U  |  ,   |   |  P   |  T    |  S  |  R  |  N  |  ^ |
+// | LSHIFT   |  K  |  Y  |  È->  |  PAD.|  W   |   |  G   |  C    |  M  |  H  |  V  |  Z |
+//                        |  ->   |  SYM | GUI  |   | ⇧SPC | ⏎ CMD | SYMB|
 
                         bindings = <
-   &kp TAB        &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &kp MEH        &hm LGUI OP_A    &hm LCTRL OP_I &hm LALT OP_E         &hm LSHIFT OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
-   &kp LSHIFT     &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &lt SYMB OP_DOT   &kp OP_W         &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
-                                       &kp LCTRL        &kp LALT          &kp LGUI         &kp SPACE        &mo CMD     &mo SYMB
+   &kp TAB    &kp OP_AGRV &kp OP_J       &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D        &kp OP_L      &kp OP_QUOT    &kp OP_Q &kp OP_X
+   &kp MEH    &kp OP_A    &hm LCTRL OP_I &hm LALT OP_E    &hm LSHIFT OP_U   &kp OP_COMM      &kp OP_P         &hm RSHIFT OP_T &hm RALT OP_S &hm RCTRL OP_R &kp OP_N &kp OP_CIR
+   &kp LSHIFT &kp OP_K    &kp OP_Y       &hm MOVE OP_EGRV &hm PAD OP_DOT    &kp OP_W         &kp OP_G         &kp OP_C        &hm SYMB OP_M &kp OP_H       &kp OP_V &mt RSHIFT OP_Z
+                                         &mo MOVE         &mo SYMB          &kp LGUI         &hm RSHIFT SPACE &hm RET CMD     &mo SYMB
                         >;
                 };
                 lower_layer {
