@@ -91,7 +91,7 @@
    &kp TAB    &kp OP_AGRV &kp OP_J       &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D        &kp OP_L      &kp OP_QUOT    &kp OP_Q &kp OP_X
    &kp MEH    &kp OP_A    &lh LCTRL OP_I &lh LALT OP_E    &lh LSHIFT OP_U   &kp OP_COMM      &kp OP_P         &rh RSHIFT OP_T &rh RALT OP_S &rh RCTRL OP_R &kp OP_N &kp OP_CIR
    &kp LSHIFT &kp OP_K    &kp OP_Y       &lh MOVE OP_EGRV &lh PAD OP_DOT    &kp OP_W         &kp OP_G         &kp OP_C        &rh SYMB OP_M &kp OP_H       &kp OP_V &rh RSHIFT OP_Z
-                                         &mo MOVE         &mo SYMB          &kp LGUI         &rh RSHIFT SPACE &rh RET CMD     &mo SYMB
+                                         &mo MOVE         &mo SYMB          &kp LGUI         &rh RSHIFT SPACE &lt RET CMD     &mo SYMB
                         >;
                 };
                 lower_layer {
