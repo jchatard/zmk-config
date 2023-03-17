@@ -35,11 +35,31 @@
 };
 
 / {
+        behaviors {
+                lh_pht: left_hand_positional_hold_tap {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "LEFT_POSITIONAL_HOLD_TAP";
+                    #binding-cells = <2>;
+                    flavor = "tap-unless-interrupted";
+                    tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+                    quick-tap-ms = <200>;
+                    bindings = <&kp>, <&kp>;
+                    hold-trigger-key-positions = <19 20 21 22>;    // <---[[right-hand keys]]
+                };
+            };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         label = "Optimot";
+
+// ---------------------------------------------------------------------------------------------------
+// |  0 |  1 |  2 |  3 |  4 |  5 | |  6 |  7 |  8 |  9 | 10 | 11 |
+// | 12 | 13 | 14 | 15 | 16 | 17 | | 18 | 19 | 20 | 21 | 22 | 23 |
+// | 24 | 25 | 26 | 27 | 28 | 29 | | 30 | 31 | 32 | 33 | 34 | 35 |
+//                | 36 | 37 | 38 | | 39 | 40 | 41 |
+
 // ---------------------------------------------------------------------------------------------------
 // | TAB      |  À  |  J  |  O    |  É   |  B   |   |  F   |  D    |  L  |  '  |  Qu |  X |
 // | MEH      |  A  |  I  |  E    |  U 12|  ,   |   |  P   |  T    |  S  |  R  |  N  |  ^ |
@@ -48,7 +68,7 @@
 
                         bindings = <
    &kp TAB        &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU       &kp OP_B         &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &kp MEH        &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
+   &kp MEH        &lh_pht LGUI OP_A    &lh_pht LCTRL OP_I &lh_pht LALT OP_E         &lh_pht LSHIFT OP_U      &kp OP_COMM      &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
    &kp LSHIFT     &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &lt SYMB OP_DOT   &kp OP_W         &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
                                        &kp LCTRL        &kp LALT          &kp LGUI         &kp SPACE        &mo CMD     &mo SYMB
                         >;
