@@ -28,17 +28,6 @@
 #define THUMBS_R 39 40 41
 
 
-// Mouse specific config
-&mmv {    
-        time-to-max-speed-ms = <500>;
-        acceleration-exponent=<1>;
-};
-&mwh {    
-        time-to-max-speed-ms = <2000>;
-        acceleration-exponent=<0>;
-};
-
-
 /*                KEY POSITIONS
 
   ╭────────────────────────╮ ╭────────────────────────╮
