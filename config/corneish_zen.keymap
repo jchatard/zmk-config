@@ -47,7 +47,8 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <250>;
-    quick-tap-ms = <250>;              // repeat on tap-into-hold
+    quick-tap-ms = <150>;              // repeat on tap-into-hold
+    global-quick-tap;
     hold-trigger-key-positions = <0>;  // tap on interrupt
 };
 
