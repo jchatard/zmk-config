@@ -58,30 +58,30 @@
                 default_layer {
                         label = "Optimot";
 // ---------------------------------------------------------------------------------------------------
-// | TAB      |  À  |  J  |  O    |  É   |  B     |   |  F        |  D    |  L  |  '  |  Qu |  X |
-// | MEH      |  A  |  I  |  E    |  U 12| LSHIFT,|   | RSHIFT P  |  T    |  S  |  R  |  N  |  ^ |
-// | LSHIFT   |  K  |  Y  |  È->  | .SYM |  W     |   |  G        |  C    |  M  |  H  |  V  |  Z |
-//                        | LCTRL |  ALT | GUI    |   | RSHIFT SPC| CMD   | SYMB|
+// | TAB      |  À   |  J  |  O    |  É    |  B   |   |  F  |  D    |  L  |  '  |  Qu  |  X |
+// | MEH      |CTRL A|ALT I|  E    |  U 12 |  ,   |   |  P  |  T    |  S  |ALT R|CTRL N|  ^ |
+// | Z        |  K   |  Y  |  È->  | .     |  W   |   |  G  |  C    |  M  |  H  |  V   |  / |
+//                         | SYMB  |LSHIFT | GUI  |   | SPC | CMD   | SYMB| 
 
                         bindings = <
-   &kp TAB        &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU       &kp OP_B           &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &kp MEH        &kp OP_A    &kp OP_I &kp OP_E         &lt PAD OP_U      &mt LSHIFT OP_COMM &mt RSHIFT OP_P  &kp OP_T    &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
-   &kp LSHIFT     &kp OP_K    &kp OP_Y &lt MOVE OP_EGRV &lt SYMB OP_DOT   &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H    &kp OP_V &mt RSHIFT OP_Z
-                                       &kp LCTRL        &kp LALT          &kp LGUI           &kp SPACE        &mo CMD     &mo SYMB
+   &kp TAB        &kp OP_AGRV    &kp OP_J      &kp OP_O         &kp OP_EACU       &kp OP_B           &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT    &kp OP_Q       &kp OP_X
+   &kp MEH        &mt LCTRL OP_A &mt LALT OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM        &kp OP_P         &kp OP_T    &kp OP_S &mt LALT OP_R  &mt LCTRL OP_N &kp OP_CIR
+   &kp OP_Z       &kp OP_K       &kp OP_Y      &lt MOVE OP_EGRV &lt SYMB OP_DOT   &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H       &kp OP_V       &kp OP_SLSH
+                                               &mo SYMB         &kp LSHIFT        &kp LGUI           &kp SPACE        &mo CMD     &mo SYMB
                         >;
                 };
                 lower_layer {
                         label = "$€@#/()";
 // -----------------------------------------------------------------------------------------
-// |   €  |  @  |  #  |  _  |  %  |  =  |   | DEL  |  [  |  ]  |  '  |     |      | 
-// |   $  |  «  |  »  |  "  |  -  |  +  |   | BSPC |  (  |  )  |  `  |     |      |
-// |  ⌘Z  | ⌘R  | "|" |  /  |  \  |  *  |   |   /  |  {  |  }  |  "  |     |      |
-//                    |     |     |     |   |   .  |  <  |  >  |
+// |   €  |  @  |  #  |  _  |  %  |  =  |   | DEL  |  [  |  '  |  ]  |     |      | 
+// |   $  |  «  |  »  |  "  |  -  |  +  |   | BSPC |  (  |  "  |  )  |  <  |   >  |
+// |  ⌘Z  | ⌘R  | "|" |  /  |  \  |  *  |   |   /  |  {  |  `  |  }  |     |      |
+//                    |     |     |     |   |   .  |  /  |     |
                         bindings = <
-   &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &kp OP_EQL      &kp DEL     &kp OP_LBRC &kp OP_RBRC  &kp OP_QUOT &trans &trans
-   &kp OP_DLR    &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS     &kp BSPC    &kp OP_LPRN &kp OP_RPRN  &kp OP_LSQU &trans &trans
-   &kp LG(OP_Z)  &kp LG(OP_R)   &kp OP_PIPE  &kp OP_SLSH  &kp OP_BSLS  &kp OP_ASTR     &kp OP_SLSH &kp OP_LCBR &kp OP_RCBR  &kp OP_DQUO &trans &trans
-                           	             &trans       &trans       &trans          &kp OP_DOT  &kp OP_LABK &kp OP_RABK
+   &kp OP_EURO   &kp OP_AT      &kp OP_HASH  &kp OP_UNDS  &kp OP_PERC  &kp OP_EQL      &kp DEL     &kp OP_LBRC &kp OP_QUOT  &kp OP_RBRC &trans      &trans
+   &kp OP_DLR    &kp OP_LDAQ    &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS     &kp BSPC    &kp OP_LPRN &kp OP_DQUO  &kp OP_RPRN &kp OP_LABK &kp OP_RABK
+   &kp LG(OP_Z)  &kp LG(OP_R)   &kp OP_PIPE  &kp OP_SLSH  &kp OP_BSLS  &kp OP_ASTR     &kp OP_SLSH &kp OP_LCBR &kp OP_LSQU  &kp OP_RCBR &trans      &trans
+                           	                 &trans       &trans       &trans          &kp OP_DOT  &kp OP_SLSH &trans
                         >;
                 };
 
