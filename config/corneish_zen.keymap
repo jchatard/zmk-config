@@ -58,16 +58,16 @@
                 default_layer {
                         label = "Optimot";
 // ---------------------------------------------------------------------------------------------------
-// | TAB      |  À   |  J  |  O    |  É    |  B   |   |  F  |  D    |  L  |  '  |  Qu  |  X |
-// | MEH      |CTRL A|ALT I|  E    |  U 12 |  ,   |   |  P  |  T    |  S  |ALT R|CTRL N|  ^ |
-// | Z        |  K   |  Y  |  È->  | .     |  W   |   |  G  |  C    |  M  |  H  |  V   |  / |
+// | TAB      |  À   |  J  |  O    |  É    |  B   |   |  F  |  D    |  L  |  '  |  Qu  |  X   |
+// | MEH      |  A   |  I  |  E    |  U    |  ,   |   |  P  |  T    |  S  |  R  |  N   |ALT ^ |
+// | Z        |CTRL K|ALT Y|  È->  |  . 12 |  W   |   |  G  |  C    |  M  | H   |  V   |CTRL /|
 //                         | SYMB  |LSHIFT | GUI  |   | SPC | CMD   | SYMB| 
 
                         bindings = <
-   &kp TAB        &kp OP_AGRV    &kp OP_J      &kp OP_O         &kp OP_EACU       &kp OP_B           &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT    &kp OP_Q       &kp OP_X
-   &kp MEH        &mt LCTRL OP_A &mt LALT OP_I &kp OP_E         &lt PAD OP_U      &kp OP_COMM        &kp OP_P         &kp OP_T    &kp OP_S &mt LALT OP_R  &mt LCTRL OP_N &kp OP_CIR
-   &kp OP_Z       &kp OP_K       &kp OP_Y      &lt MOVE OP_EGRV &lt SYMB OP_DOT   &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H       &kp OP_V       &kp OP_SLSH
-                                               &mo SYMB         &kp LSHIFT        &kp LGUI           &kp SPACE        &mo CMD     &mo SYMB
+   &kp TAB        &kp OP_AGRV     &kp OP_J      &kp OP_O         &kp OP_EACU       &kp OP_B           &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT    &kp OP_Q       &kp OP_X
+   &kp MEH        &kp OP_A        &kp OP_I      &kp OP_E         &kp OP_U          &kp OP_COMM        &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R       &kp OP_N       &mt LALT OP_CIR
+   &kp OP_Z       &mt LCTRL OP_K  &mt LALT OP_Y &lt MOVE OP_EGRV &lt PAD OP_DOT    &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H       &kp OP_V       &mt LCTRL OP_SLSH
+                                                &mo SYMB         &kp LSHIFT        &kp LGUI           &kp SPACE        &mo CMD     &mo SYMB
                         >;
                 };
                 lower_layer {
