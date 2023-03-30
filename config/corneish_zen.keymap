@@ -61,14 +61,14 @@
 // ---------------------------------------------------------------------------------------------------
 // | TAB      |  À   |  J  |  O    |  É    |  B   |   |  F  |  D    |  L  |  '  |  Qu  |  X    |
 // | MEH      |  A   |  I  |  E    |  U    |  ,   |   |  P  |  T    |  S  |  R  |  N   |ALT ^  |
-// | Z        |CTRL K|ALT Y|  È->  |  . 12 |  W   |   |  G  |  C    |  M  |  H  |  V   |CTRL / |
-//                         | SYMB  |LSHIFT | GUI  |   | SPC | CMD   |SHIFT| 
+// | Z        |CTRL K|ALT Y|  È->  |  . 12 |  W   |   |  G  |  C    |  M  |  H  |  V   |CTRL ç |
+//                         | SYMB  |LSHIFT | GUI  |   | SPC | CMD   |  /  | 
 
                         bindings = <
    &kp TAB        &kp OP_AGRV     &kp OP_J      &kp OP_O         &kp OP_EACU       &kp OP_B           &kp OP_F         &kp OP_D    &kp OP_L &kp OP_QUOT    &kp OP_Q       &kp OP_X
    &kp MEH        &kp OP_A        &kp OP_I      &kp OP_E         &kp OP_U          &kp OP_COMM        &kp OP_P         &kp OP_T    &kp OP_S &kp OP_R       &kp OP_N       &mt LALT OP_CIR
-   &kp OP_Z       &mt LCTRL OP_K  &mt LALT OP_Y &lt MOVE OP_EGRV &lt PAD OP_DOT    &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H       &kp OP_V       &mt LCTRL OP_SLSH
-                                                &mo SYMB         &kp LSHIFT        &kp LGUI           &kp SPACE        &mo CMD     &kp RSHIFT
+   &kp OP_Z       &mt LCTRL OP_K  &mt LALT OP_Y &lt MOVE OP_EGRV &lt PAD OP_DOT    &kp OP_W           &kp OP_G         &kp OP_C    &kp OP_M &kp OP_H       &kp OP_V       &mt LCTRL OP_CCED
+                                                &mo SYMB         &kp LSHIFT        &kp LGUI           &kp SPACE        &mo CMD     &kp OP_SLSH
                         >;
                 };
                 lower_layer {
@@ -108,12 +108,12 @@
 // |      |     |     |      |       |      |   |  DEL|  7  |  8  |  9  |  -  |  ×   |
 // |      |     |     |      |       |      |   | BSPC|  4  |  5  |  6  |  *  |  =   |
 // |      |     |     |      |       |      |   |  /  |  1  |  2  |  3  |  +  |  RET |
-//                    |      |       |      |   |  .  |  0  |  ,  |
+//                    |      |       |      |   |  0  |  .  |  ,  |
                         bindings = <
    &trans &trans &trans &trans &trans &trans     &kp DEL     &kp OP_7     &kp OP_8    &kp OP_9 &kp OP_MIN  &kp OP_MUL
    &trans &trans &trans &trans &trans &trans     &kp BSPC    &kp OP_4     &kp OP_5    &kp OP_6 &kp OP_ASTR &kp OP_EQL
    &trans &trans &trans &trans &trans &trans     &kp OP_SLSH &kp OP_1     &kp OP_2    &kp OP_3 &kp OP_PLUS &kp RET
-                        &trans &trans &trans     &kp OP_DOT  &kp OP_0     &kp OP_COMM
+                        &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
                         >;
                 };
 
