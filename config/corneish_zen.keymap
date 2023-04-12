@@ -59,16 +59,16 @@
                 default_layer {
                         label = "Optimot";
 // ---------------------------------------------------------------------------------------------------
-// | TAB      |  À   |  J  |  O    |  É    |  B   |   |  F     |  D    |  L  |  '  |  Qu  |  X    |
-// | SYMB     |  A   |  I  |  E    |  U    |  ,   |   |  P     |  T    |  S  |  R  |  N   |  ^    |
-// | BCKSP    |  Z   |  Y  |  È->  |  . 12 |  K   |   |  G     |  C    |  M  |  H  |  V   |  RET  |
-//                         | CTRL  |  ALT  | GUI  |   |SPC/SHFT| CMD W |  Ç  | 
+// | TAB      |  à   |  j  |  o    |  é    |  b   |   |  f     |  d    |  l  |  '  |  qu  |  X    |
+// | SYMB     |  a   |  i  |  e    |  u    |  ,   |   |  p     |  t    |  s  |  r  |  n   |  ^    |
+// | BCKSP    |  z   |  y  |  è->  |  . 12 |  k   |   |  g     |  c    |  m  |  h  |  v   |  RET  |
+//                         | CTRL  |  ALT  | GUI  |   |  SPC   | SHFT w|  ç  | 
 
                         bindings = <
-   &kp TAB  &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU    &kp OP_B    &kp OP_F         &kp OP_D     &kp OP_L &kp OP_QUOT &kp OP_Q &kp OP_X
-   &mo SYMB &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U       &kp OP_COMM &kp OP_P         &kp OP_T     &kp OP_S &kp OP_R    &kp OP_N &kp OP_CIR
-   &kp BSPC &kp OP_Z    &kp OP_Y &lt MOVE OP_EGRV &lt PAD OP_DOT &kp OP_K    &kp OP_G         &kp OP_C     &kp OP_M &kp OP_H    &kp OP_V &kp RET
-                                 &kp LCTRL        &kp LALT       &kp LGUI    &mt LSHFT SPACE  &lt CMD OP_W &kp OP_SLSH
+   &kp TAB  &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU    &kp OP_B    &kp OP_F  &kp OP_D       &kp OP_L    &kp OP_QUOT &kp OP_Q &kp OP_X
+   &mo SYMB &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U       &kp OP_COMM &kp OP_P  &kp OP_T       &kp OP_S    &kp OP_R    &kp OP_N &kp OP_CIR
+   &kp BSPC &kp OP_Z    &kp OP_Y &lt MOVE OP_EGRV &lt PAD OP_DOT &kp OP_K    &kp OP_G  &kp OP_C       &kp OP_M    &kp OP_H    &kp OP_V &kp RET
+                                 &kp LCTRL        &kp LALT       &kp LGUI    &kp SPACE &mt LSHFT OP_W &kp OP_CCED
                         >;
                 };
                 lower_layer {
@@ -77,12 +77,12 @@
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0      |   €  | 
 // |      |  «  |  »  |  "  |  -  |  +  |   |  *  |  /  |  =  |  (  |  )      |   $  |
 // |      |  %  |  @  |  #  |  $  |  €  |   |     |BCKSP| DEL | MEH |GRAVE_ESC|      |
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |     |   |     |  W  |  Ç  |
                         bindings = <
-   &kp OP_EURO &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7    &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_EURO
-   &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &kp OP_DLR
-   &trans      &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC    &kp DEL    &kp MEH     &gresc      &trans
-                                        &trans       &trans       &trans      &trans      &trans      &trans
+   &kp OP_EURO &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_EURO
+   &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH  &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &kp OP_DLR
+   &trans      &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC     &kp DEL    &kp MEH     &gresc      &trans
+                                        &trans       &trans       &trans      &trans      &kp LS(OP_W) &kp LS(OP_CCED)
                         >;
                 };
 
