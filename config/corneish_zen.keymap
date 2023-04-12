@@ -45,11 +45,11 @@
 };
 
 &mt {
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <150>;
     quick-tap-ms = <150>;              // repeat on tap-into-hold
     global-quick-tap;
-    hold-trigger-key-positions = <0>;  // tap on interrupt
+    // hold-trigger-key-positions = <0>;  // tap on interrupt
 };
 
 / {
