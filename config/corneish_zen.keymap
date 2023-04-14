@@ -45,7 +45,7 @@
 };
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <150>;
     quick-tap-ms = <150>;              // repeat on tap-into-hold
     // maybe I should also remove this…
@@ -62,8 +62,8 @@
 // ---------------------------------------------------------------------------------------------------
 // | TAB      |  à   |  j  |  o    |  é    |  b   |   |  f     |  d    |  l  |  '  |  qu  | RET |
 // | SYMB     |  a   |  i  |  e    |  u    |  ,   |   |  p     |  t    |  s  |  r  |  n   |  ^  |
-// | BCKSP    |  z   |  Sy |  è->  |  . 12 |  k   |   |  g     |  c    |  m  |  h  |  v   |  X  |
-//                         | CTRL  |  ALT  | GUI  |   |  SPC   | SHFT w|  ç  | 
+// | BCKSP    |  z   |SHFTy|  è->  |  . 12 |  k   |   |  g     |  c    |  m  |  h  |  v   |  X  |
+//                         | CTRL  |  ALT  | GUI  |   |  SPC   | SHFTw |  ç  | 
 
                         bindings = <
    &kp TAB  &kp OP_AGRV &kp OP_J        &kp OP_O         &kp OP_EACU    &kp OP_B    &kp OP_F  &kp OP_D       &kp OP_L    &kp OP_QUOT &kp OP_Q &kp RET
@@ -75,14 +75,14 @@
                 lower_layer {
                         label = "$€@#/()";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0      |   €  | 
-// |      |  «  |  »  |  "  |  -  |  +  |   |  *  |  /  |  =  |  (  |  )      |   $  |
-// |      |  %  |  @  |  #  |  $  |  €  |   |     |BCKSP| DEL | MEH |GRAVE_ESC|      |
-//                    |     |     |     |   |     |  W  |  Ç  |
+// | ESC|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   `  | 
+// |    |  «  |  »  |  "  |  -  |  +  |   |  *  |  /  |  =  |  (  |  )  |      |
+// |BSPC|  %  |  @  |  #  |  $  |  €  |   |     |BSPC | DEL | MEH | ESC |      |
+//                  |     |     |     |   |     |  W  |  Ç  |
                         bindings = <
-   &gresc     &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_EURO
-   &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH  &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &kp OP_DLR
-   &trans      &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC     &kp DEL    &kp MEH     &gresc      &trans
+   &ESC        &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_LSQU
+   &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH  &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &trans
+   &kp BSPC    &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC     &kp DEL    &kp MEH     &kp ESC     &trans
                                         &trans       &trans       &trans      &trans      &kp LS(OP_W) &kp LS(OP_CCED)
                         >;
                 };
@@ -90,15 +90,15 @@
                 raise_layer {
                         label = "Move";
 // -------------------------------------------------------------------------------------------------
-// |     |      |      |      |     |       |   |       | Pup     |  Up  | Pdow      |      |      |
-// |     |      |      |      |     |       |   |       | Left    |  Dwn | Right     |      |      |
+// |     |      |      |      |     |       |   | DEL   | Pup     |  Up  | Pdow      |      |      |
+// |     |      |      |      |     |       |   | BSPC  | Left    |  Dwn | Right     |      |      |
 // |     |      |      |      |     |       |   |       | Home    |      | End       |      |      |
 //                     |      |     |       |   |       |         |      |
                         bindings = <
-   &trans &trans &trans &trans &trans &trans      &trans &kp PG_UP &kp UP   &kp PG_DN  &trans &trans
-   &trans &trans &trans &trans &trans &trans      &trans &kp LEFT  &kp DOWN &kp RIGHT  &trans &trans
-   &trans &trans &trans &trans &trans &trans      &trans &kp HOME  &trans   &kp END    &trans &trans
-                        &trans &trans &trans      &trans &trans    &trans
+   &trans &trans &trans &trans &trans &trans      &kp DEL  &kp PG_UP &kp UP   &kp PG_DN  &trans &trans
+   &trans &trans &trans &trans &trans &trans      &kp BSPC &kp LEFT  &kp DOWN &kp RIGHT  &trans &trans
+   &trans &trans &trans &trans &trans &trans      &trans   &kp HOME  &trans   &kp END    &trans &trans
+                        &trans &trans &trans      &trans   &trans    &trans
                         >;
                 };
 
