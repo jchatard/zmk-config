@@ -80,7 +80,7 @@
 // |BSPC|  %  |  @  |  #  |  $  |  €  |   |     |BSPC | DEL | MEH | ESC |      |
 //                  |     |     |     |   |     |  W  |  Ç  |
                         bindings = <
-   &ESC        &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_LSQU
+   &kp ESC     &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_LSQU
    &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH  &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &trans
    &kp BSPC    &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC     &kp DEL    &kp MEH     &kp ESC     &trans
                                         &trans       &trans       &trans      &trans      &kp LS(OP_W) &kp LS(OP_CCED)
@@ -126,7 +126,7 @@
 // |          |      |      |      |      |        |   |        |      |       |      |      |      |
 //                          |      |      |        |   |        |      |       |
                           bindings = <
-   &gresc      &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans       &kp ESC &trans &trans &trans
+   &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans       &kp ESC &trans &trans &trans
    &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &kp BSPC &kp LG(OP_Z) &kp RET &trans &trans &trans
    &trans      &trans   &trans &trans &trans &trans       &trans   &trans       &trans  &trans &trans &trans
                                &trans &trans &trans       &trans   &trans       &trans
