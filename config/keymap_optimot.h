@@ -113,6 +113,7 @@
 #define OP_QUES LS(OP_QUOT) // ?
 // Row 3
 #define OP_SCLN LS(OP_COMM) // ;
+#define OP_EXL  LS(OP_CIR)  // !
 // Row 4
 #define OP_COLN LS(OP_DOT)  // :
 // Row 5
@@ -205,7 +206,7 @@
 #define OP_TTRD LS(LA(OP_RPRN)) // ⅔
 #define OP_PRIM LS(LA(OP_PERC)) // ′
 #define OP_DPRM LS(LA(OP_PLUS)) // ″
-#define OP_NBHY LS(LA(OP_MIN)) // ‑
+#define OP_NBHY LS(LA(OP_MIN))  // ‑
 #define OP_AEQL LS(LA(OP_EQL))  // ≈
 #define OP_DIV  LS(LA(OP_SLSH)) // ÷
 #define OP_OVER LS(LA(OP_ASTR)) // ‾
@@ -246,4 +247,4 @@
 
 // Row 5
 #define OP_NNBS LS(LA(SPC))  //   (narrow non-breaking space)
-#define OP_PERC LS(OP_HASH) // %
+#define OP_PERC LS(OP_HASH)  // %
