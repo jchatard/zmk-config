@@ -63,17 +63,17 @@
 // | TAB      |  à   |  j  |  o    |  é    |  b   |   |  f     |  d    |  l  |  '  |  qu  | RET |
 // | CAPS     |  a   |  i  |  e    |  u    |  ,   |   |  p     |  t    |  s  |  r  |  n   |  ^  |
 // | SHFT w   |  z   |  y  |  è    |  . 12 |  k   |   |  g     |  c    |  m  |  h  |  v   |SHFTx|
-//                         | CTRL  |  ALT  | GUI  |   |  SPC   | -> ç  | SYM | 
+//                         | CTRL  |  ALT  | GUI  |   |  SPC   | -> ç  |SYM w| 
 
                         bindings = <
-   &kp TAB    &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU    &kp OP_B    &kp OP_F  &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp RET
-   &kp CAPS   &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U       &kp OP_COMM &kp OP_P  &kp OP_T         &kp OP_S      &kp OP_R    &kp OP_N &kp OP_CIR
-   &kp OP_W   &kp OP_Z    &kp OP_Y &kp OP_EGRV      &lt PAD OP_DOT &kp OP_K    &kp OP_G  &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_X
-                                   &kp LCTRL        &kp LALT       &kp LGUI    &kp SPACE &lt MOVE OP_CCED &lt SYM SPACE
+   &kp TAB           &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU    &kp OP_B    &kp OP_F  &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp RET
+   &kp CAPS          &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U       &kp OP_COMM &kp OP_P  &kp OP_T         &kp OP_S      &kp OP_R    &kp OP_N &kp OP_CIR
+   &mt LSHIFT OP_W   &kp OP_Z    &kp OP_Y &kp OP_EGRV      &lt PAD OP_DOT &kp OP_K    &kp OP_G  &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &mt LSHIFT OP_X
+                                          &kp LCTRL        &kp LALT       &kp LGUI    &kp SPACE &lt MOVE OP_CCED &lt SYM OP_W
                         >;
                 };
                 lower_layer {
-                        label = "SŷmbŎls";
+                        label = "Symbols";
 // -----------------------------------------------------------------------------------------
 // | ESC|  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   `  | 
 // |    |  «  |  »  |  "  |  -  |  +  |   |  *  |  /  |  =  |  (  |  )  |      |
