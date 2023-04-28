@@ -97,7 +97,7 @@
                         bindings = <
    &kp OP_HASH &kp OP_PERC &kp OP_DQUO &kp OP_QUOT &kp OP_LCBR &kp OP_RCBR      &kp DEL  &kp PG_UP &kp UP   &kp PG_DN  &trans   &kp BSPC
    &kp OP_AT   &kp OP_PLUS &kp OP_EQL  &kp OP_MIN  &kp OP_LPRN &kp OP_RPRN      &kp BSPC &kp LEFT  &kp DOWN &kp RIGHT  &kp LGUI &kp OP_LSQU
-   &kp LSHIFT  &kp OP_ASTR &kp OP_SLSH &kp OP_DLR  &kp OP_LBRC &kp OP_RBRC      &trans   &kp HOME  &kp LALT &kp END    &trans   &kp ESC
+   &kp LSHIFT  &kp OP_ASTR &kp OP_SLSH &kp OP_DLR  &kp OP_LABK &kp OP_RABK      &trans   &kp HOME  &kp LALT &kp END    &trans   &kp ESC
                                        &trans      &trans      &trans           &trans   &trans    &trans
                         >;
                 };
