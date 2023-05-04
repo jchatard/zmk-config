@@ -56,7 +56,7 @@
 #define OP_QUOT O     // '
 #define OP_Q    P     // Q
 #define OP_X    LBKT  // X
-#define OP_CCED RBKT  // Ç
+#define OP_Z    RBKT  // Z
 // Row 3
 #define OP_A    A     // A
 #define OP_I    S     // I
@@ -69,7 +69,7 @@
 #define OP_R    L     // R
 #define OP_N    SEMI  // N
 #define OP_CIR  SQT   // ^
-#define OP_Z    BSLH  // Z
+#define OP_CCED BSLH  // Ç
 // Row 4
 #define OP_K    Z     // K
 #define OP_Y    X     // Y
@@ -157,7 +157,7 @@
 #define OP_IQUE LA(OP_QUOT) // ¿
 #define OP_RNGA LA(OP_Q)    // °
 #define OP_PIPE LA(OP_X)    // |
-#define OP_WTRA LA(OP_CCED) // ➼
+#define OP_WTRA LA(OP_Z)    // ➼
 // Row 3
 #define OP_AE   LA(OP_A)    // Æ
 #define OP_DIAE LA(OP_I)    // ¨ (dead)
