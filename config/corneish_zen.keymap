@@ -125,10 +125,10 @@
 // |      |     |     |      |       |      |   |  /  |  1  |  2  |  3  |  +  |  RET |
 //                    |      |       |      |   |  0  |  .  |  ,  |
                         bindings = <
-   &lt ADJUST &trans &trans &trans &trans &trans     &kp DEL     &kp OP_7     &kp OP_8    &kp OP_9 &kp OP_MIN  &kp OP_MUL
+   &mo ADJUST &trans &trans &trans &trans &trans     &kp DEL     &kp OP_7     &kp OP_8    &kp OP_9 &kp OP_MIN  &kp OP_MUL
    &trans     &trans &trans &trans &trans &trans     &kp BSPC    &kp OP_4     &kp OP_5    &kp OP_6 &kp OP_ASTR &kp OP_EQL
    &trans     &trans &trans &trans &trans &trans     &kp OP_SLSH &kp OP_1     &kp OP_2    &kp OP_3 &kp OP_PLUS &kp RET
-                        &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
+                            &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
                         >;
                 };
 
