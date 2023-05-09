@@ -14,7 +14,7 @@
 #define DEFAULT 0
 #define SYMB   1
 #define MOVE   2
-#define PAD    3
+#define GEEK    3
 #define CMD    4
 #define ADJUST 5
 
@@ -82,7 +82,7 @@
                         bindings = <
    &kp TAB            &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU    &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp OP_X
    &kp CAPS           &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U       &kp OP_COMM   &kp OP_P          &kp OP_T         &kp OP_S      &kp OP_R    &kp OP_N &kp OP_CIR
-   &mt LSHIFT OP_HASH &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt PAD OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
+   &mt LSHIFT OP_HASH &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
                                            &kp LCTRL        &kp LALT       &gqt LGUI RET &gqt LSHIFT SPACE &lt MOVE OP_CCED &lt SYMB BSPC
                         >;
                 };
@@ -118,17 +118,17 @@
 
 
                 pad_layer {
-                        label = "Pad";
+                        label = "Geek";
 // -----------------------------------------------------------------------------------
 // |ADJUST|     |     |      |       |      |   |  DEL|  7  |  8  |  9  |  -  |  ×   |
-// |      |     |     |      |       |      |   | BSPC|  4  |  5  |  6  |  *  |  =   |
-// |      |     |     |      |       |      |   |  /  |  1  |  2  |  3  |  +  |  RET |
-//                    |      |       |      |   |  0  |  .  |  ,  |
+// |      |     |     |      |       |      |   | BSPC|  4  |  5  |  6  |  0  |  =   |
+// |      |     |     |      |       |      |   |  *  |  1  |  2  |  3  |  +  |  RET |
+//                    |      |       |      |   |  /  |  .  |  ,  |
                         bindings = <
    &mo ADJUST &trans &trans &trans &trans &trans     &kp DEL     &kp OP_7     &kp OP_8    &kp OP_9 &kp OP_MIN  &kp OP_MUL
-   &trans     &trans &trans &trans &trans &trans     &kp BSPC    &kp OP_4     &kp OP_5    &kp OP_6 &kp OP_ASTR &kp OP_EQL
-   &trans     &trans &trans &trans &trans &trans     &kp OP_SLSH &kp OP_1     &kp OP_2    &kp OP_3 &kp OP_PLUS &kp RET
-                            &trans &trans &trans     &kp OP_0    &kp OP_DOT   &kp OP_COMM
+   &trans     &trans &trans &trans &trans &trans     &kp BSPC    &kp OP_4     &kp OP_5    &kp OP_6 &kp OP_0    &kp OP_EQL
+   &trans     &trans &trans &trans &trans &trans     &kp OP_ASTR &kp OP_1     &kp OP_2    &kp OP_3 &kp OP_PLUS &kp RET
+                            &trans &trans &trans     &kp OP_SLSH &kp OP_DOT   &kp OP_COMM
                         >;
                 };
 
