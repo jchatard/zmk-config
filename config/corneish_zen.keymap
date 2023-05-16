@@ -61,6 +61,7 @@
             #binding-cells = <0>;
             bindings = <&kp CAPS>, <&kp OP_ACUT>;
             mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
     };
 
