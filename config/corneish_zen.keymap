@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_CMD";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>, <&kp OP_DLR>;
+            bindings = <&kp CAPS>, <&kp OP_ACUT>;
             mods = <(MOD_LGUI)>;
         };
     };
