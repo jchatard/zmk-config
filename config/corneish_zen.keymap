@@ -128,15 +128,15 @@
                 raise_layer {
                         label = "Move";
 // -------------------------------------------------------------------------------------------------
-// |  #   |  |  |  &  |  [   |   ]   |   @  |   | DEL   | Pup     |  Up  | Pdow      |      | RET  |
-// |  @   |  {  |  }  |  (   |   )   |   \  |   | BSPC  | Left    |  Dwn | Right     | GUI  |  `   |
-// |ADJUST|  !  |  =  |  <   |   >   |   /  |   | +     |   -     |  $   | `         |      | ESC  |
-//                    |  "   |   '   |      |   |       |         |SPACE |
+// |  #   |  |  |  &  |  [   |   ]   |   @  |   | DEL   | Pup     |  Up  | Pdow      | "    | RET  |
+// |  @   |  {  |  }  |  (   |   )   |   \  |   | BSPC  | Left    |  Dwn | Right     | '    | SPACE|
+// |ADJUST|  !  |  =  |  <   |   >   |   /  |   | +     |   -     |  $   | `         | `    | ESC  |
+//                    | CTRL |  ALT  | GUI  |   |       |         |SPACE |
                         bindings = <
-   &kp OP_HASH &kp OP_PIPE &kp OP_AMPR  &kp OP_LBRC &kp OP_RBRC &kp OP_AT      &kp DEL     &kp PG_UP  &kp UP     &kp PG_DN   &trans   &kp RET
-   &kp OP_AT   &kp OP_LCBR &kp OP_RCBR  &kp OP_LPRN &kp OP_RPRN &kp OP_BSLS    &kp BSPC    &kp LEFT   &kp DOWN   &kp RIGHT   &kp LGUI &kp OP_LSQU
-   &mo ADJUST  &kp OP_EXL  &kp OP_EQL   &kp OP_LABK &kp OP_RABK &kp OP_SLSH    &kp OP_PLUS &kp OP_MIN &kp OP_DLR &kp OP_LSQU &trans   &kp ESC
-                                        &kp OP_DQUO &kp OP_QUOT &trans         &trans      &trans     &kp SPACE
+   &kp OP_HASH &kp OP_PIPE &kp OP_AMPR  &kp OP_LBRC &kp OP_RBRC &kp OP_AT      &kp DEL     &kp PG_UP  &kp UP     &kp PG_DN   &kp OP_DQUO &kp RET
+   &kp OP_AT   &kp OP_LCBR &kp OP_RCBR  &kp OP_LPRN &kp OP_RPRN &kp OP_BSLS    &kp BSPC    &kp LEFT   &kp DOWN   &kp RIGHT   &kp OP_QUOT &kp SPACE
+   &mo ADJUST  &kp OP_EXL  &kp OP_EQL   &kp OP_LABK &kp OP_RABK &kp OP_SLSH    &kp OP_PLUS &kp OP_MIN &kp OP_DLR &kp OP_LSQU &kp OP_LSQU &kp ESC
+                                        &kp LCTRL   &kp LALT    &kp LGUI       &trans      &trans     &trans
                         >;
                 };
 
