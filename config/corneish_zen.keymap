@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #include "keymap_optimot.h"
 
@@ -15,7 +16,7 @@
 #define SYMB    1
 #define MOVE    2
 #define GEEK    3
-#define CMD     4
+#define MOUSE   4
 #define ADJUST  5
 
 #define MEH LA(LS(LCTRL))
@@ -100,14 +101,14 @@
 // ---------------------------------------------------------------------------------------------------
 // | RCTRL TAB|  à   |  j  |  o    |  é    |  b    |   |  f     |  d    |  l      |  '  |  qu  |  x  |
 // | CAPS  (`)|  a   |  i  |  e    |  u    |  ,    |   |  p     |  t    |  s      |  r  |  n   |  ^  |
-// | SHFT #   |  k   |  y  |  è    | . GEEK|  w    |   |  g     |  c    |  m      |  h  |  v   |  z  |
+// | SHFT #   |  k   |  y🖱️|  è    | . GEEK|  w    |   |  g     |  c    |  m      |  h  |  v   |  z  |
 //                         | CTRL  |  ALT  |GUI RET|   | (S)SPC | -> ç  |SYM  @   | 
 
                         bindings = <
-   &mt RCTRL TAB      &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU     &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp OP_X
-   &grcaps            &kp OP_A    &kp OP_I &kp OP_E         &kp OP_U        &kp OP_COMM   &kp OP_P          &kp OP_T         &kp OP_S      &kp OP_R    &kp OP_N &kp OP_CIR
-   &mt LSHIFT OP_HASH &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
-                                           &kp LCTRL        &kp LALT        &mt LGUI RET  &gqt LSHIFT SPACE &lt MOVE OP_CCED &lt SYMB OP_AT
+   &mt RCTRL TAB      &kp OP_AGRV &kp OP_J       &kp OP_O         &kp OP_EACU     &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp OP_X
+   &grcaps            &kp OP_A    &kp OP_I       &kp OP_E         &kp OP_U        &kp OP_COMM   &kp OP_P          &kp OP_T         &kp OP_S      &kp OP_R    &kp OP_N &kp OP_CIR
+   &mt LSHIFT OP_HASH &kp OP_K    &lt MOUSE OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
+                                                 &kp LCTRL        &kp LALT        &mt LGUI RET  &gqt LSHIFT SPACE &lt MOVE OP_CCED &lt SYMB OP_AT
                         >;
                 };
                 lower_layer {
@@ -157,17 +158,17 @@
                 };
 
                 cmd_layer {
-                        label = "CMD";
+                        label = "Mouse";
 // --------------------------------------------------------------------------------------------------
-// | GRAVE_ESC|CAPS  |      |      |      | DEL    |   | DEL    |      | ESC   |      |      |      |
-// | SHIFT    |      |      |      |      | BSPC   |   | BSPC   |  ⌘Z  | RET   |      |      |      |
+// | GRAVE_ESC|CAPS  |      |      |      | DEL    |   | DEL    | ScUp | UP    | ScDow|      |      |
+// | SHIFT    |      |      |      |      | BSPC   |   | LC     | Left | Down  | Right|  RC  |      |
 // |          |      |      |      |      |        |   |        |      |       |      |      |      |
-//                          |      |      |        |   |        |      |       |
+//                          |      |      |        |   |        |  LC  |   RC  |
                           bindings = <
-   &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL  &trans       &kp ESC &trans &trans &trans
-   &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &kp BSPC &kp LG(OP_Z) &kp RET &trans &trans &trans
-   &trans      &trans   &trans &trans &trans &trans       &trans   &trans       &trans  &trans &trans &trans
-                               &trans &trans &trans       &trans   &trans       &trans
+   &kp ESC     &kp CAPS &trans &trans &trans &kp DEL      &kp DEL   &mwh SCROLL_UP &mmv MOVE_UP   &mwh SCROLL_DOWN &trans    &trans
+   &kp LSHIFT  &trans   &trans &trans &trans &kp BSPC     &mkp LCLK &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &mkp RCLK &trans
+   &trans      &trans   &trans &trans &trans &trans       &trans    &trans         &trans         &trans           &trans    &trans
+                               &trans &trans &trans       &trans    &mkp LCLK      &mkp RCLK
                         >;
                 };
 
