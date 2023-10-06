@@ -49,6 +49,8 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
+ZMK_COMBO(del,  &kp ESC, RT2 RT3, ALL, 25)
+
 
 /* 42 KEY MATRIX / LAYOUT MAPPING
 
