@@ -49,7 +49,10 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-ZMK_COMBO(del,  &kp ESC, RT2 RT3, ALL, 25)
+ZMK_COMBO(del,   &kp ESC, RT2 RT3, ALL, 25)
+
+ZMK_COMBO(enterl, &kp RET, LB1 LB2, ALL, 25)
+ZMK_COMBO(enterr, &kp RET, RB1 RB2, ALL, 25)
 
 
 /* 42 KEY MATRIX / LAYOUT MAPPING
@@ -116,13 +119,13 @@ ZMK_COMBO(del,  &kp ESC, RT2 RT3, ALL, 25)
 // | RCTRL TAB|  à   |  j  |  o    |  é    |  b    |   |  f     |  d    |  l      |  '  |  qu  |  x  |
 // | CAPS  (`)|  a   |  i  |  e    |  u    |  ,    |   |  p     |  t    |  s      |  r  |  n   |  ^  |
 // | SHFT #   |  k   |  y  |  è    | . GEEK|  w    |   |  g     |  c    |  m      |  h  |  v   |  z  |
-//                         | CTRL  |  /    | RET   |   |  SPC   | -> ç  |SYM  @   | 
+//                         | CTRL  |   ⌘   | SHFT  |   |  SPC   | -> ç  |SYM  @   | 
 
                         bindings = <
    &mt RCTRL TAB      &kp OP_AGRV    &kp OP_J        &kp OP_O         &kp OP_EACU     &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L        &kp OP_QUOT       &kp OP_Q        &kp OP_X
    &grcaps            &hml LGUI OP_A &hml LCTRL OP_I &hml LALT  OP_E  &hml LSHFT OP_U &kp OP_COMM   &kp OP_P          &hmr RSHIFT OP_T &hmr LALT OP_S  &hmr LCTRL OP_R   &hmr LGUI  OP_N &kp OP_CIR
    &mt LSHIFT OP_HASH &kp OP_K       &kp OP_Y        &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M        &kp OP_H          &kp OP_V        &kp OP_Z
-                                                     &kp LCTRL        &kp OP_SLSH     &kp RET       &kp SPACE         &lt MOVE OP_CCED &lt SYMB OP_AT
+                                                     &kp LCTRL        &kp LGUI        &kp LSHIFT    &kp SPACE         &lt MOVE OP_CCED &lt SYMB OP_AT
                         >;
                 };
                 lower_layer {
