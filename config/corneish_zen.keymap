@@ -324,7 +324,7 @@
    &mt RCTRL TAB      &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU     &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp OP_X
    &grcaps            &homey_left LGUI OP_A    &homey_left LCTRL OP_I &homey_left LALT OP_E         &shift_left LSHIFT OP_U        &kp OP_COMM   &kp OP_P          &shift_right RSHIFT OP_T         &homey_right RALT OP_S      &homey_right RCTRL OP_R    &homey_right RGUI OP_N &kp OP_CIR
    &mt LSHIFT OP_HASH &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
-                                           &kp LCTRL        &kp LALT        &mt LGUI RET  &gqt LSHIFT SPACE &lt MOVE OP_CCED &lt SYMB OP_AT
+                                           &kp LCTRL        &kp LALT        &mt LGUI RET  &space LSHIFT SPACE &lt MOVE OP_CCED &lt SYMB OP_AT
                         >;
                 };
                 lower_layer {
@@ -336,7 +336,7 @@
 //                  | CTRL| ALT | GUI |   |     |     |     |
                         bindings = <
    &kp ESC     &kp OP_1    &kp OP_2     &kp OP_3     &kp OP_4     &kp OP_5    &kp OP_6    &kp OP_7     &kp OP_8   &kp OP_9    &kp OP_0    &kp OP_LSQU
-   &trans      &kp OP_LDAQ &kp OP_RDAQ  &kp OP_DQUO  &kp OP_MIN   &kp OP_PLUS &kp OP_ASTR &kp OP_SLSH  &kp OP_EQL &kp OP_LPRN &kp OP_RPRN &trans
+   &trans      &homey_left LGUI  OP_LDAQ &homey_left LCTRL OP_RDAQ  &homey_left LALT OP_DQUO  &shift_left LSHIFT OP_MIN   &kp OP_PLUS &kp OP_ASTR &shift_right RSHIFT OP_SLSH  &homey_right RALT OP_EQL &homey_right RCTRL OP_LPRN &homey_right RGUI OP_RPRN &trans
    &kp BSPC    &kp OP_PERC &kp OP_AT    &kp OP_HASH  &kp OP_DLR   &kp OP_EURO &trans      &kp BSPC     &kp DEL    &kp MEH     &kp ESC     &trans
                                         &trans       &trans       &trans      &trans      &kp LS(OP_W) &kp LS(OP_CCED)
                         >;
@@ -351,7 +351,7 @@
 //                    | CTRL |  ALT  | GUI  |   |       |         |SPACE |
                         bindings = <
    &kp OP_HASH &kp OP_PIPE &kp OP_AMPR  &kp OP_LBRC &kp OP_RBRC &kp OP_EURO    &kp DEL     &kp PG_UP  &kp UP     &kp PG_DN   &kp OP_DQUO &kp RET
-   &kp OP_AT   &kp OP_LCBR &kp OP_RCBR  &kp OP_LPRN &kp OP_RPRN &kp OP_BSLS    &kp BSPC    &kp LEFT   &kp DOWN   &kp RIGHT   &kp OP_QUOT &kp SPACE
+   &kp OP_AT   &homey_left LGUI   OP_LCBR &homey_left LCTRL OP_RCBR  &homey_left LALT OP_LPRN &shift_left LSHIFT OP_RPRN &kp OP_BSLS    &kp BSPC    &kp LEFT   &kp DOWN   &kp RIGHT   &kp OP_QUOT &kp SPACE
    &trans      &kp OP_EXL  &kp OP_EQL   &kp OP_LABK &kp OP_RABK &kp OP_SLSH    &kp OP_PLUS &kp OP_MIN &kp OP_DLR &kp OP_ASTR &kp OP_LSQU &kp ESC
                                         &kp LCTRL   &kp LALT    &kp LGUI       &trans      &trans     &trans
                         >;
