@@ -317,14 +317,14 @@
 // ---------------------------------------------------------------------------------------------------
 // | RCTRL TAB|  à   |  j  |  o    |  é    |  b    |   |  f     |  d    |  l      |  '  |  qu  |  x  |
 // | CAPS  (`)|  a   |  i  |  e    |  u    |  ,    |   |  p     |  t    |  s      |  r  |  n   |  ^  |
-// | SHFT #   |  k   |  y  |  è    | . GEEK|  w    |   |  g     |  c    |  m      |  h  |  v   |  z  |
-//                         | CTRL  |  ALT  |GUI RET|   | (S)SPC | -> ç  |SYM  @   | 
+// | (S)ESC   |  k   |  y  |  è    | . GEEK|  w    |   |  g     |  c    |  m      |  h  |  v   |  z  |
+//                         | @     |  #    |   RET |   | SPC    | -> ç  |SYM  DEL | 
 
                         bindings = <
    &mt RCTRL TAB      &kp OP_AGRV &kp OP_J &kp OP_O         &kp OP_EACU     &kp OP_B      &kp OP_F          &kp OP_D         &kp OP_L      &kp OP_QUOT &kp OP_Q &kp OP_X
    &grcaps            &homey_left LGUI OP_A    &homey_left LCTRL OP_I &homey_left LALT OP_E         &shift_left LSHIFT OP_U        &kp OP_COMM   &kp OP_P          &shift_right RSHIFT OP_T         &homey_right RALT OP_S      &homey_right RCTRL OP_R    &homey_right RGUI OP_N &kp OP_CIR
-   &mt LSHIFT OP_HASH &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
-                                           &kp LCTRL        &kp LALT        &mt LGUI RET  &kp SPACE &lt MOVE OP_CCED &lt SYMB OP_AT
+   &mt LSHIFT ESC &kp OP_K    &kp OP_Y &kp OP_EGRV      &lt GEEK OP_DOT &kp OP_W      &kp OP_G          &kp OP_C         &kp OP_M      &kp OP_H    &kp OP_V &kp OP_Z
+                                           &kp OP_AT        &kp OP_HASH        &kp RET  &kp SPACE &lt MOVE OP_CCED &lt SYMB BSPC
                         >;
                 };
                 lower_layer {
