@@ -96,7 +96,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "Optimot";
+                        label = "Optimoti";
 // ---------------------------------------------------------------------------------------------------
 // | RCTRL TAB|  à   |  j  |  o    |  é    |  b    |   |  f     |  d    |  l      |  '  |  qu  |  x  |
 // | CAPS  (`)|  a   |  i  |  e    |  u    |  ,    |   |  p     |  t    |  s      |  r  |  n   |  ^  |
